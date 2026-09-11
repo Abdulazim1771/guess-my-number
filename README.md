@@ -12,6 +12,18 @@ Play the live game directly in your browser:
 
 ---
 
+## 📸 Gameplay Preview
+
+| 🎮 Clue: Too Low | 🎮 Clue: Too High |
+| :---: | :---: |
+| ![Guessing Clue - Too Low](screenshots/gameplay-too-low.png) | ![Guessing Clue - Too High](screenshots/gameplay-too-high.png) |
+
+| 🎉 Victory (Correct Number!) | 💥 Game Over (Out of Lives!) |
+| :---: | :---: |
+| ![Victory Screen](screenshots/game-win.png) | ![Game Over Screen](screenshots/game-over.png) |
+
+---
+
 ## 🕹️ How to Play
 
 1. **Enter a Guess**: Type an integer between **1 and 20** in the input field.
@@ -20,7 +32,7 @@ Play the live game directly in your browser:
    - 📈 **Too high!**: Your guess is greater than the secret number.
    - 📉 **Too low!**: Your guess is smaller than the secret number.
    - 🎉 **Correct Number!**: You found the secret number! The screen turns green and reveals the number.
-   - 💥 **You lost the game!**: Your score reached 0 before finding the number.
+   - 💥 **Game Over!**: Your score reached 0, the secret number is revealed, and the screen turns red.
 4. **Scoring**:
    - You start each round with **20 points**.
    - Every wrong guess reduces your score by **1 point**.
