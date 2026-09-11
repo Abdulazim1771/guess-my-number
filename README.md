@@ -32,9 +32,11 @@ Play the live game directly in your browser:
 ## ✨ Features
 
 - **Keyboard Friendly**: Play seamlessly using the <kbd>Enter</kbd> key to submit guesses.
-- **Dynamic UI & Visual Feedback**: Color transitions and animated box resizing on victory.
+- **Dynamic UI & Visual Feedback**: Smooth color transitions (green on victory, red on defeat), retro screen-shake effect, and animated box resizing.
+- **Arcade Game Over State**: Reveals the secret number, disables inputs, and pulses the **Again!** button when lives run out.
+- **Synthesized 8-Bit Retro Sound Effects**: Zero external audio files—pure Web Audio API synthesized victory fanfare, defeat jingle, and feedback blips.
 - **Highscore Tracking**: Retains the highest score achieved during your gaming session.
-- **Clean Architecture**: Refactored using **KISS** (Keep It Simple, Stupid) and **DRY** (Don't Repeat Yourself) principles with DOM element caching and reusable logic.
+- **Clean Architecture**: Refactored using **KISS** and **DRY** principles with DOM caching and reusable logic.
 - **Zero Dependencies**: 100% lightweight Vanilla JavaScript, HTML5, and CSS3.
 
 ---

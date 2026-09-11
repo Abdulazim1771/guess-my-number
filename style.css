@@ -15,7 +15,8 @@ body {
   font-family: 'Press Start 2P', sans-serif;
   color: #eee;
   background-color: #222;
-  /* background-color: #60b347; */
+  transition: background-color 0.4s ease;
+  overflow-x: hidden;
 }
 
 /* LAYOUT */
@@ -67,6 +68,7 @@ h1 {
   bottom: 0;
   left: 50%;
   transform: translate(-50%, 50%);
+  transition: width 0.4s ease;
 }
 
 .between {
@@ -116,4 +118,43 @@ h1 {
 
 .label-score {
   margin-bottom: 2rem;
+}
+
+.btn:disabled,
+.guess:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+/* Animations */
+@keyframes shake {
+  0% { transform: translate(0, 0); }
+  20% { transform: translate(-12px, 0); }
+  40% { transform: translate(12px, 0); }
+  60% { transform: translate(-8px, 0); }
+  80% { transform: translate(8px, 0); }
+  100% { transform: translate(0, 0); }
+}
+
+.shake {
+  animation: shake 0.5s ease-in-out;
+}
+
+@keyframes pulse-again {
+  0% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.7);
+  }
+  50% {
+    transform: scale(1.1);
+    box-shadow: 0 0 20px 8px rgba(255, 255, 255, 0.95);
+  }
+  100% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(255, 255, 255, 0);
+  }
+}
+
+.pulse-btn {
+  animation: pulse-again 1.2s infinite ease-in-out;
 }
