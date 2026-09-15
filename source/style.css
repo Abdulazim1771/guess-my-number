@@ -3,7 +3,7 @@
 * {
   margin: 0;
   padding: 0;
-  box-sizing: inherit;
+  box-sizing: border-box;
 }
 
 html {
@@ -17,21 +17,25 @@ body {
   background-color: #222;
   transition: background-color 0.4s ease;
   overflow-x: hidden;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
 /* LAYOUT */
 header {
   position: relative;
-  height: 35vh;
+  min-height: 35vh;
   border-bottom: 7px solid #eee;
 }
 
 main {
-  height: 65vh;
+  flex: 1;
   color: #eee;
   display: flex;
   align-items: center;
   justify-content: space-around;
+  padding: 2rem;
 }
 
 .left {
@@ -62,6 +66,7 @@ h1 {
   color: #333;
   font-size: 6rem;
   width: 15rem;
+  max-width: 85vw;
   padding: 3rem 0rem;
   text-align: center;
   position: absolute;
@@ -69,6 +74,11 @@ h1 {
   left: 50%;
   transform: translate(-50%, 50%);
   transition: width 0.4s ease;
+  z-index: 10;
+}
+
+.number.expanded {
+  width: 30rem;
 }
 
 .between {
@@ -157,4 +167,167 @@ h1 {
 
 .pulse-btn {
   animation: pulse-again 1.2s infinite ease-in-out;
+}
+
+/* RESPONSIVE DESIGN */
+
+/* Tablets & Small Laptops (<= 900px) */
+@media (max-width: 900px) {
+  html {
+    font-size: 55%;
+  }
+
+  h1 {
+    font-size: 3rem;
+  }
+
+  .left,
+  .right {
+    width: 42rem;
+  }
+}
+
+/* Mobile Devices (<= 768px) */
+@media (max-width: 768px) {
+  html {
+    font-size: 50%;
+  }
+
+  header {
+    min-height: 24rem;
+    padding: 2rem 1.5rem 5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .again {
+    position: absolute;
+    top: 1.5rem;
+    left: 1.5rem;
+    padding: 1.2rem 1.8rem;
+    font-size: 1.4rem;
+  }
+
+  .between {
+    position: absolute;
+    top: 2rem;
+    right: 1.5rem;
+    font-size: 1.1rem;
+    text-align: right;
+  }
+
+  h1 {
+    position: relative;
+    top: auto;
+    left: auto;
+    transform: none;
+    font-size: 2.2rem;
+    line-height: 1.4;
+    width: 85%;
+    margin-top: 4.5rem;
+    margin-bottom: 2rem;
+  }
+
+  .number {
+    font-size: 5rem;
+    width: 13rem;
+    padding: 2rem 0;
+  }
+
+  .number.expanded {
+    width: 24rem;
+  }
+
+  main {
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 6rem 1.5rem 4rem;
+    gap: 3.5rem;
+  }
+
+  .left {
+    width: 100%;
+    max-width: 32rem;
+  }
+
+  .guess {
+    width: 18rem;
+    font-size: 3.8rem;
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+  }
+
+  .btn {
+    padding: 1.6rem 2.5rem;
+    font-size: 1.8rem;
+  }
+
+  .check {
+    width: 18rem;
+  }
+
+  .right {
+    width: 100%;
+    max-width: 34rem;
+    text-align: center;
+    font-size: 1.8rem;
+  }
+
+  .message {
+    margin-bottom: 2.5rem;
+    height: auto;
+    min-height: 2.5rem;
+    line-height: 1.4;
+  }
+
+  .label-score,
+  .label-highscore {
+    margin-bottom: 1.5rem;
+  }
+}
+
+/* Extra Small Phones (<= 420px) */
+@media (max-width: 420px) {
+  html {
+    font-size: 45%;
+  }
+
+  h1 {
+    font-size: 1.8rem;
+    line-height: 1.5;
+    margin-top: 5rem;
+  }
+
+  .between {
+    font-size: 1rem;
+    max-width: 14rem;
+  }
+
+  .again {
+    padding: 1rem 1.4rem;
+    font-size: 1.3rem;
+  }
+
+  .number {
+    font-size: 4rem;
+    width: 11rem;
+    padding: 1.8rem 0;
+  }
+
+  .number.expanded {
+    width: 20rem;
+  }
+
+  .guess {
+    width: 16rem;
+    font-size: 3.4rem;
+    padding: 1.2rem;
+  }
+
+  .check {
+    width: 16rem;
+    font-size: 1.6rem;
+  }
 }

@@ -97,7 +97,7 @@ const checkGuess = function () {
     displayMessage('🎉 Correct Number!');
     numberEl.textContent = secretNumber;
     bodyEl.style.backgroundColor = '#60b347';
-    numberEl.style.width = '30rem';
+    numberEl.classList.add('expanded');
 
     guessEl.disabled = true;
     checkBtn.disabled = true;
@@ -124,7 +124,7 @@ const checkGuess = function () {
 
       // Reveal secret number
       numberEl.textContent = secretNumber;
-      numberEl.style.width = '30rem';
+      numberEl.classList.add('expanded');
 
       // Visual defeat styling & shake
       bodyEl.style.backgroundColor = '#b83232';
@@ -156,7 +156,8 @@ const resetGame = function () {
   bodyEl.style.backgroundColor = '#222';
   bodyEl.classList.remove('shake');
   againBtn.classList.remove('pulse-btn');
-  numberEl.style.width = '15rem';
+  numberEl.classList.remove('expanded');
+  numberEl.style.width = '';
 
   guessEl.focus();
 };

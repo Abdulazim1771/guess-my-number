@@ -44,6 +44,7 @@ Play the live game directly in your browser:
 ## ✨ Features
 
 - **Keyboard Friendly**: Play seamlessly using the <kbd>Enter</kbd> key to submit guesses.
+- **Fully Responsive & Mobile Friendly**: Seamlessly adapts to phones, tablets, and desktops with centered stacked layouts and adaptive typography.
 - **Dynamic UI & Visual Feedback**: Smooth color transitions (green on victory, red on defeat), retro screen-shake effect, and animated box resizing.
 - **Arcade Game Over State**: Reveals the secret number, disables inputs, and pulses the **Again!** button when lives run out.
 - **Synthesized 8-Bit Retro Sound Effects**: Zero external audio files—pure Web Audio API synthesized victory fanfare, defeat jingle, and feedback blips.
