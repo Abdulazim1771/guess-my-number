@@ -73,7 +73,7 @@ No build tools or package managers required!
    ```bash
    cd guess-my-number
    ```
-3. Open `index.html` in your favorite web browser, or use the VS Code **Live Server** extension.
+3. Open `source/index.html` in your favorite web browser, or use the VS Code **Live Server** extension.
 
 ---
 
@@ -84,9 +84,8 @@ To make your game playable online via GitHub Pages:
 1. Push this project to your GitHub repository (e.g. `guess-my-number`).
 2. Go to your repository on GitHub and open **Settings**.
 3. In the left navigation menu, click **Pages**.
-4. Under **Build and deployment** > **Source**, choose **Deploy from a branch**.
-5. Select branch: `main` and folder: `/ (root)`.
-6. Click **Save**. Within a couple of minutes, your live site will be ready at:
+4. Under **Build and deployment** > **Source**, select **GitHub Actions**.
+5. The included workflow (`.github/workflows/deploy.yml`) will automatically deploy the `source` directory to:
    `https://abdulazim1771.github.io/guess-my-number/`
 
 ---
